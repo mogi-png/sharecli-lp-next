@@ -23,11 +23,8 @@ export default function Footer() {
             </a>
           ))}
         </nav>
-        <p className="mb-1 text-[11px] text-[#bba9b3]">
-          協力：オタク向け美容室 OFF-KAi!!
-        </p>
         <p className="text-[11px] text-[#bba9b3]">
-          © {siteConfig.name}
+          協力：オタク向け美容室 OFF-KAi!!
         </p>
       </Container>
     </footer>
