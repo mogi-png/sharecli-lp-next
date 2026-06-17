@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-pink: #ff6fa0;
+  --color-brand-pink-deep: #ff4d8d;
+  --color-brand-pink-light: #ffd9e8;
+  --color-brand-pink-pale: #fff3f8;
+  --color-brand-purple: #b48ee8;
+  --color-brand-purple-light: #ece2fb;
+  --color-brand-purple-pale: #f6f1fd;
+  --color-brand-ink: #4a3850;
+  --color-brand-ink-soft: #8d7b96;
+  --color-line-green: #06c755;
+
+  --font-heading: var(--font-zen-maru), "Hiragino Maru Gothic ProN", sans-serif;
+  --font-body: var(--font-noto-sans-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-brand-pink-pale);
+  color: var(--color-brand-ink);
+  font-family: var(--font-body);
+}
+
+@keyframes pulse-cta {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
 }
