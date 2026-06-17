@@ -2,9 +2,8 @@ import { siteConfig } from "@/lib/site-config";
 import Container from "@/components/ui/Container";
 
 const links = [
-  { label: "利用規約", href: "#" },
-  { label: "プライバシーポリシー", href: "#" },
-  { label: "運営会社", href: "#" },
+  { label: "プライバシーポリシー", href: "https://sharecli.co.jp/privacy-policy/" },
+  { label: "運営会社", href: "https://sharecli.co.jp/company/" },
 ];
 
 export default function Footer() {
@@ -16,6 +15,8 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-b border-[#e3d6de] text-[11.5px] text-brand-ink-soft"
             >
               {link.label}
