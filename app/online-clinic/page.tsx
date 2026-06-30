@@ -124,10 +124,14 @@ function OcHero() {
               <div className="mt-6 lg:max-w-sm">
                 <LineButton label="30秒アンケートでクーポンを受け取る" />
                 <p className="mt-2.5 text-[12.5px] leading-relaxed text-brand-ink-soft">
-                  今のお薬・購入価格に関する簡単なアンケート回答後、対象の方へLINEでクーポンをご案内します。
+                  30秒アンケート回答後、対象クーポンをLINEでご案内します。
+                </p>
+                <p className="mt-1.5 text-[12.5px] leading-relaxed text-brand-ink">
+                  <span className="font-bold text-brand-pink-deep">診察料は0円。</span>
+                  対象商品・プランに限り、今の購入価格から5%OFFでご案内できる場合があります。
                 </p>
                 <p className="mt-1 text-[11px] text-brand-ink/40">
-                  ※ クーポンは対象者のみ発行。詳細はLINE登録後にご案内します。
+                  ※ お薬代・送料は別途かかります。クーポンは対象者のみ発行。
                 </p>
               </div>
 
@@ -295,6 +299,14 @@ function OcDiscount() {
                   <CheckIcon className="h-5 w-5 text-brand-pink-deep" />
                 </div>
                 <div>
+                  <div className="mb-2 flex flex-wrap gap-1.5">
+                    <span className="inline-block rounded-full bg-brand-pink-deep px-3 py-0.5 text-[11px] font-bold text-white">
+                      診察料0円
+                    </span>
+                    <span className="inline-block rounded-full border border-brand-pink-light bg-brand-pink-pale px-3 py-0.5 text-[11px] font-bold text-brand-pink-deep">
+                      お薬代・送料は別途
+                    </span>
+                  </div>
                   <p className="text-[15px] font-bold text-brand-ink">
                     他院・他サービスをご利用中の方へ
                   </p>
@@ -631,7 +643,8 @@ const notices = [
   "5%OFFは対象者のみ適用されます。現在のご利用状況・処方内容によっては適用されない場合があります",
   "5%OFFの適用可否および詳細はLINE登録後にご案内します",
   "本ページはサービス内容のご案内を目的としており、医療効果や特定の結果を保証するものではありません",
-  "料金や診療メニューの詳細はLINE登録後にご確認いただけます",
+  "診察料はかかりません。お薬が処方される場合はお薬代・送料などが別途かかります",
+  "料金・診療メニューの詳細はLINE登録後にご確認いただけます",
 ];
 
 function OcDisclaimer() {
@@ -676,9 +689,9 @@ const faqItems: FaqItem[] = [
       "はい、ご相談いただけます。ただし処方内容は診察後に医師が判断します。他院での処方内容をそのまま引き継ぐことをお約束するものではありません。",
   },
   {
-    question: "診察費は別途かかりますか？",
+    question: "診察料はかかりますか？",
     answer:
-      "料金の詳細はLINE登録後にご案内します。診察費・薬代などを含めた費用感は、ご相談後に明確にお伝えします。",
+      "診察料はかかりません。お薬が処方される場合は、お薬代や送料などが別途かかります。費用の詳細はLINE登録後、または診察前のご案内でご確認いただけます。なお、本サービスは自由診療です。診察結果により処方できない場合があります。",
   },
   {
     question: "本当に通院不要ですか？",
@@ -727,11 +740,12 @@ function OcCta() {
             </p>
             <div className="mt-8">
               <LineButton label="30秒アンケートでクーポンを受け取る" variant="primary" />
-              <p className="mt-2.5 text-center text-[12px] leading-relaxed text-brand-ink/60 lg:text-left">
-                今のお薬・購入価格に関する簡単なアンケート回答後、対象の方へクーポンをご案内します。
+              <p className="mt-2.5 text-center text-[12.5px] leading-relaxed text-brand-ink/70 lg:text-left">
+                <span className="font-bold text-brand-pink-deep">診察料は0円。</span>
+                アンケート回答後、対象の方へクーポンをLINEでご案内します。
               </p>
               <p className="mt-1 text-center text-[11px] text-brand-ink/40 lg:text-left">
-                ※ クーポンは対象者のみ発行。必ずしも割引を保証するものではありません。
+                ※ お薬代・送料は別途かかります。クーポンは対象者のみ発行。
               </p>
             </div>
           </div>
