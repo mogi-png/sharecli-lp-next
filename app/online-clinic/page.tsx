@@ -57,7 +57,7 @@ function PhotoFrame({
           fill
           quality={90}
           sizes={sizes}
-          className="object-cover"
+          className="object-cover text-transparent"
         />
       </div>
     </div>
@@ -87,7 +87,7 @@ function OcHero() {
             priority
             quality={90}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover lg:rounded-l-[48px]"
+            className="object-cover text-transparent lg:rounded-l-[48px]"
           />
         </div>
 
@@ -435,7 +435,7 @@ function OcCategories() {
               fill
               quality={90}
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-cover object-center text-transparent"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-brand-ink/20 px-4 text-center">
               <span className="text-xs font-bold tracking-[0.2em] text-white/90 uppercase">
