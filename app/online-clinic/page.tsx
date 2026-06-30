@@ -355,40 +355,44 @@ function OcDiscount() {
 
 const medicineCategories = [
   {
-    category: "AGA・薄毛ケア",
-    note: "男女ともご相談いただけます",
-    items: ["フィナステリド", "デュタステリド", "ミノキシジル（内服）", "ミノキシジル（外用）"],
-    iconColor: "text-brand-purple",
-    bg: "bg-brand-purple-pale/40",
-    border: "border-brand-purple-light",
-    tag: "bg-brand-purple-pale text-brand-purple",
-  },
-  {
-    category: "美容・美白ケア",
-    note: "肌・美白・エイジングケア",
-    items: ["トラネキサム酸", "L-システイン", "ビタミンC・E・B群", "その他美容内服薬"],
-    iconColor: "text-brand-pink-deep",
+    category: "美容内服・美肌ケア",
+    note: "シミ・くすみ・肌荒れなど、美容内服について相談できます。",
+    items: ["美容内服5合剤", "タチオン", "ハイチオール", "シナール", "ユベラ", "トラネキサム酸"],
     bg: "bg-brand-pink-pale",
     border: "border-brand-pink-light",
     tag: "bg-brand-pink-pale text-brand-pink-deep",
   },
   {
     category: "メディカルダイエット",
-    note: "医師管理のもとの体重ケア",
-    items: ["GLP-1受容体作動薬（セマグルチドなど）", "防風通聖散", "その他内服薬"],
-    iconColor: "text-brand-purple",
+    note: "医師管理のもと、体重・体型のお悩みをサポートします。",
+    items: ["リベルサス", "ビクトーザ", "サクセンダ", "ウゴービ", "防風通聖散"],
     bg: "bg-brand-purple-pale/40",
     border: "border-brand-purple-light",
     tag: "bg-brand-purple-pale text-brand-purple",
   },
   {
-    category: "ED（勃起不全）",
-    note: "男性向け・プライバシー配慮",
+    category: "AGA・薄毛ケア",
+    note: "薄毛・抜け毛のお悩みをオンラインで相談できます。",
+    items: ["フィナステリド", "デュタステリド", "ミノキシジル（内服）", "ミノキシジル（外用）"],
+    bg: "bg-brand-purple-pale/40",
+    border: "border-brand-purple-light",
+    tag: "bg-brand-purple-pale text-brand-purple",
+  },
+  {
+    category: "ED・男性のお悩み",
+    note: "EDなどのデリケートなお悩みも、プライバシーに配慮して相談できます。",
     items: ["シルデナフィル", "タダラフィル", "バルデナフィル"],
-    iconColor: "text-brand-pink-deep",
     bg: "bg-brand-pink-pale",
     border: "border-brand-pink-light",
     tag: "bg-brand-pink-pale text-brand-pink-deep",
+  },
+  {
+    category: "その他の相談メニュー",
+    note: "上記以外のお悩みもLINEからお気軽にご相談ください。",
+    items: ["低用量ピル", "睡眠改善薬", "ビタミン補給", "その他内服薬・サプリメント"],
+    bg: "bg-brand-purple-pale/40",
+    border: "border-brand-purple-light",
+    tag: "bg-brand-purple-pale text-brand-purple",
   },
 ];
 
@@ -412,10 +416,10 @@ function OcMedicineMenu() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {medicineCategories.map(({ category, note, items, bg, border, tag }) => (
+          {medicineCategories.map(({ category, note, items, bg, border, tag }, idx) => (
             <div
               key={category}
-              className={`rounded-2xl border ${border} ${bg} p-5`}
+              className={`rounded-2xl border ${border} ${bg} p-5 ${idx === medicineCategories.length - 1 && medicineCategories.length % 2 !== 0 ? "sm:col-span-2 sm:max-w-[calc(50%-8px)]" : ""}`}
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className={`rounded-full px-3 py-0.5 text-[11px] font-bold ${tag}`}>
