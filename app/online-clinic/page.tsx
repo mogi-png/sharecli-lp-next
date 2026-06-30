@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Faq, { type FaqItem } from "@/components/Faq";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -81,8 +80,8 @@ function OcHero() {
         <div className="relative h-[220px] w-full lg:order-2 lg:h-full lg:min-h-[580px]">
           <div className="absolute inset-0 bg-linear-to-br from-slate-100 via-blue-50 to-slate-50" />
           <Image
-            src="/images/online-clinic/hero-home-consultation.webp"
-            alt="自宅でスマホを使ってオンライン相談する人物"
+            src="/images/online-clinic/hero.jpg"
+            alt="自宅でスマホを見ながらオンライン相談をする女性"
             fill
             priority
             quality={90}
@@ -219,10 +218,10 @@ function OcBenefits() {
           {/* 写真: SP上・PC左 */}
           <div className="w-full lg:order-1 lg:flex-1">
             <PhotoFrame
-              src="/images/online-clinic/home-smartphone.webp"
-              alt="自宅のソファでリラックスしながらスマホを操作する人物"
+              src="/images/online-clinic/beauty-care.jpg"
+              alt="自宅でセルフケアをする女性"
               aspect="aspect-[4/3]"
-              gradient="from-slate-100 via-blue-50 to-slate-50"
+              gradient="from-brand-pink-pale via-white to-brand-purple-pale"
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
           </div>
@@ -315,8 +314,8 @@ function OcDiscount() {
           {/* 写真: SP下・PC右 */}
           <div className="w-full lg:w-[45%] lg:shrink-0">
             <PhotoFrame
-              src="/images/online-clinic/price-check.webp"
-              alt="スマホで価格を比較検討している人物"
+              src="/images/online-clinic/price-check.jpg"
+              alt="価格を確認する女性"
               aspect="aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[320px]"
               gradient="from-slate-50 via-blue-50 to-slate-100"
               sizes="(min-width: 1024px) 45vw, 100vw"
@@ -339,8 +338,8 @@ function OcLineConsultation() {
           {/* 写真: SP上・PC右 */}
           <div className="w-full lg:order-2 lg:flex-1">
             <PhotoFrame
-              src="/images/online-clinic/line-consultation.webp"
-              alt="スマホでLINEチャット相談している手元"
+              src="/images/online-clinic/line-consult.jpg"
+              alt="スマホでLINE相談をする女性"
               aspect="aspect-[4/3]"
               gradient="from-emerald-50 via-slate-50 to-blue-50"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -426,27 +425,10 @@ function OcCategories() {
   return (
     <section className="bg-brand-purple-pale/30 py-10 lg:py-16">
       <Container>
-        {/* 写真バナー */}
-        <div className="mb-8 overflow-hidden rounded-3xl shadow-md">
-          <div className="relative h-[160px] sm:h-[200px] lg:h-[240px] bg-linear-to-r from-slate-100 via-blue-50 to-slate-50">
-            <Image
-              src="/images/online-clinic/self-care-category.webp"
-              alt="セルフケアや身だしなみを意識した日常のひとコマ"
-              fill
-              quality={90}
-              sizes="100vw"
-              className="object-cover object-center text-transparent"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-brand-ink/20 px-4 text-center">
-              <span className="text-xs font-bold tracking-[0.2em] text-white/90 uppercase">
-                CATEGORY
-              </span>
-              <h2 className="mt-1 font-heading text-[22px] font-black text-white drop-shadow sm:text-[28px] lg:text-[34px]">
-                相談できるカテゴリ
-              </h2>
-            </div>
-          </div>
-        </div>
+        <SectionHeading
+          eyebrow="CATEGORY"
+          title="相談できるカテゴリ"
+        />
 
         {/* カードグリッド */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -598,6 +580,57 @@ const faqItems: FaqItem[] = [
   },
 ];
 
+// ─── ページ専用 CTA（実写画像・二次元キャラ不使用）───────────────────────────────
+
+function OcCta() {
+  return (
+    <section className="bg-linear-to-br from-brand-pink-pale via-white to-brand-purple-pale py-10 lg:py-16">
+      <Container>
+        <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-stretch lg:gap-10">
+          {/* 写真 — PC: 右60%, SP: 上 */}
+          <div className="w-full lg:order-2 lg:w-[60%] lg:shrink-0">
+            <div className="relative mx-auto aspect-[4/3] w-full max-w-[520px] overflow-hidden rounded-3xl bg-linear-to-br from-brand-pink-pale via-white to-brand-purple-pale shadow-md lg:aspect-auto lg:h-full lg:min-h-[420px] lg:max-w-none">
+              <Image
+                src="/images/online-clinic/final-cta.jpg"
+                alt="スマホで気軽に相談する女性"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover object-top text-transparent"
+              />
+            </div>
+          </div>
+
+          {/* テキスト — PC: 左40%, SP: 下 */}
+          <div className="w-full lg:order-1 lg:w-[40%] lg:shrink-0 lg:flex lg:flex-col lg:justify-center">
+            <h2 className="text-center font-heading text-[26px] leading-[1.4] font-black text-brand-ink sm:text-[30px] lg:text-left lg:text-[36px]">
+              まずはLINEから
+              <br />
+              <span className="text-brand-pink-deep">お気軽に</span>ご確認ください
+            </h2>
+            <p className="mt-5 text-center text-[14.5px] leading-relaxed text-brand-ink/70 lg:text-left">
+              自宅からスマホで医師に相談できる
+              <br />
+              オンライン診療サービスです。
+            </p>
+            <p className="mt-3 text-center text-[14.5px] leading-relaxed text-brand-ink/70 lg:text-left">
+              AGA・美容内服・ダイエットなど、
+              <br />
+              気になるお悩みをオンラインで相談できます。
+            </p>
+            <div className="mt-8">
+              <LineButton variant="primary" />
+              <p className="mt-2.5 text-center text-[11.5px] text-brand-ink/50 lg:text-left">
+                登録は30秒程度で完了します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function OnlineClinicPage() {
@@ -614,7 +647,7 @@ export default function OnlineClinicPage() {
         <OcFlow />
         <OcDisclaimer />
         <Faq items={faqItems} />
-        <CTA />
+        <OcCta />
       </main>
       <Footer />
     </div>
