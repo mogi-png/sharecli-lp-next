@@ -105,12 +105,12 @@ function OcHero() {
               <h1 className="font-heading text-[26px] leading-[1.35] font-black text-brand-ink sm:text-[32px] lg:text-[40px]">
                 家にいながら、
                 <br />
-                オンラインで相談。
+                医師に相談できます。
                 <br />
                 <span className="text-brand-pink-deep">
-                  いつものケアを
+                  今のお薬代、
                   <br className="sm:hidden" />
-                  今より5%OFFへ。
+                  見直せるかも。
                 </span>
               </h1>
               <p className="mt-3 text-sm leading-relaxed text-brand-ink-soft lg:text-[15px]">
@@ -118,7 +118,7 @@ function OcHero() {
                 <br className="hidden sm:block" />
                 気になる悩みをスマホから相談。
                 <br />
-                通院の手間なく、自宅で診療が完結します。
+                来院不要、自宅でスマホひとつで完結します。
               </p>
 
               <div className="mt-6 lg:max-w-sm">
@@ -283,10 +283,10 @@ function OcDiscount() {
           eyebrow="PRICE"
           title={
             <>
-              今の購入価格から
-              <span className="text-brand-pink-deep">5%OFF</span>で
+              今のお薬代、
+              <span className="text-brand-pink-deep">見直せる</span>
               <br />
-              ご案内できる可能性があります
+              かもしれません
             </>
           }
         />
@@ -311,14 +311,14 @@ function OcDiscount() {
                     他院・他サービスをご利用中の方へ
                   </p>
                   <p className="mt-2 text-[13.5px] leading-relaxed text-brand-ink-soft">
-                    現在、他のクリニックやオンライン診療サービスをご利用中の方は、シェアクリでも同等の内容を
+                    現在ほかのクリニックやオンライン診療サービスをご利用中の方は、簡単なアンケート回答後、対象の方へLINEで
                     <strong className="text-brand-ink">
-                      今より5%OFFでご案内できる可能性
+                      今より5%OFFになる可能性のあるクーポン
                     </strong>
-                    があります。
+                    をご案内します。
                   </p>
                   <p className="mt-3 text-[13.5px] leading-relaxed text-brand-ink-soft">
-                    まずはLINEから対象かどうかをご確認ください。ご相談だけでも歓迎です。
+                    相談だけ・対象確認だけでも大丈夫です。
                   </p>
                 </div>
               </div>
@@ -405,9 +405,9 @@ function OcMedicineMenu() {
             <span className="text-brand-pink-deep">相談できるお薬例</span>
           </h2>
           <p className="mt-3 text-[13px] leading-relaxed text-brand-ink-soft">
-            AGA・美容内服・メディカルダイエット・EDなど、目的に合わせて医師と相談できます。
-            <br />
-            以下は取扱いのあるお薬の一例です。
+            診察結果に応じてご案内できる場合があるお薬・メニューの一例です。
+            <br className="hidden sm:block" />
+            AGA・美容内服・メディカルダイエット・EDなど、目的に合わせて医師が診察します。
           </p>
         </div>
 
@@ -485,7 +485,7 @@ function OcLineConsultation() {
               {[
                 "LINEを友だち追加するだけ",
                 "相談・質問だけでもOK",
-                "5%OFFの対象かすぐ確認できる",
+                "クーポン対象かすぐ確認できる",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2.5 text-[14px] text-brand-ink">
                   <ChatIcon className="h-4 w-4 shrink-0 text-line-green" />
@@ -508,8 +508,8 @@ function OcLineConsultation() {
 const categories = [
   {
     icon: ClipboardIcon,
-    label: "AGA・スカルプケア",
-    desc: "薄毛・抜け毛のお悩みをオンラインでご相談いただけます。",
+    label: "AGA・薄毛ケア",
+    desc: "薄毛・抜け毛のお悩みをオンラインで相談できます。",
     iconColor: "text-brand-purple",
     bg: "bg-brand-purple-pale/40",
     border: "border-brand-purple-light",
@@ -517,7 +517,7 @@ const categories = [
   {
     icon: SparkleIcon,
     label: "美容・美白ケア",
-    desc: "肌のお悩みや美容内服についてご相談いただけます。",
+    desc: "シミ・くすみ・肌荒れなど、美容内服について相談できます。",
     iconColor: "text-brand-pink-deep",
     bg: "bg-brand-pink-pale",
     border: "border-brand-pink-light",
@@ -525,15 +525,15 @@ const categories = [
   {
     icon: CheckIcon,
     label: "ダイエットサポート",
-    desc: "体型・体重管理に関するお悩みをスマホから相談できます。",
+    desc: "体型・体重管理のお悩みを、スマホからいつでも相談できます。",
     iconColor: "text-brand-purple",
     bg: "bg-brand-purple-pale/40",
     border: "border-brand-purple-light",
   },
   {
     icon: ShieldIcon,
-    label: "男性の悩み相談",
-    desc: "デリケートな男性の悩みも、プライバシーに配慮してご相談いただけます。",
+    label: "男性のお悩み相談",
+    desc: "EDなどのデリケートなお悩みも、プライバシーに配慮して相談できます。",
     iconColor: "text-brand-pink-deep",
     bg: "bg-brand-pink-pale",
     border: "border-brand-pink-light",
@@ -579,8 +579,8 @@ function OcCategories() {
 const steps = [
   {
     step: "01",
-    title: "LINEで登録・対象確認",
-    desc: "LINEを友だち追加して、5%OFFの対象かどうかをまずご確認ください。ご相談だけでもOKです。",
+    title: "LINEで登録・アンケート回答",
+    desc: "LINEを友だち追加して、30秒アンケートにお答えください。対象の方へクーポンをご案内します。",
   },
   {
     step: "02",
@@ -679,9 +679,9 @@ const faqItems: FaqItem[] = [
       "AGA（薄毛・抜け毛）、美容内服、ダイエットサポート、男性のデリケートな悩みなどに対応しています。詳細なカテゴリはLINE登録後にご確認いただけます。",
   },
   {
-    question: "5%OFFはどのように確認できますか？",
+    question: "クーポンはどうすれば受け取れますか？",
     answer:
-      "LINEに登録後、スタッフにお知らせください。ご利用状況を確認のうえ、5%OFFの対象かどうかをご案内します。必ずしも適用されることを保証するものではありません。",
+      "LINEに登録後、30秒アンケートにお答えください。現在の購入状況を確認のうえ、対象の方へLINEでクーポンをご案内します。必ずしも発行されることを保証するものではありません。",
   },
   {
     question: "現在別のクリニックで薬をもらっていますが、相談できますか？",
@@ -724,19 +724,16 @@ function OcCta() {
           {/* テキスト — PC: 左40%, SP: 下 */}
           <div className="w-full lg:order-1 lg:w-[40%] lg:shrink-0 lg:flex lg:flex-col lg:justify-center">
             <h2 className="text-center font-heading text-[26px] leading-[1.4] font-black text-brand-ink sm:text-[30px] lg:text-left lg:text-[36px]">
-              まずはLINEから
+              30秒アンケートで
               <br />
-              <span className="text-brand-pink-deep">お気軽に</span>ご確認ください
+              <span className="text-brand-pink-deep">クーポンを</span>受け取る
             </h2>
             <p className="mt-5 text-center text-[14.5px] leading-relaxed text-brand-ink/70 lg:text-left">
-              自宅からスマホで医師に相談できる
-              <br />
-              オンライン診療サービスです。
+              今のお薬・購入サービスに関するアンケートにお答えいただくと、対象の方へLINEでクーポンをご案内します。
             </p>
-            <p className="mt-3 text-center text-[14.5px] leading-relaxed text-brand-ink/70 lg:text-left">
-              AGA・美容内服・ダイエットなど、
-              <br />
-              気になるお悩みをオンラインで相談できます。
+            <p className="mt-3 text-center text-[13px] leading-relaxed text-brand-ink/50 lg:text-left">
+              AGA・美容内服・ダイエット・EDなど、
+              来院不要のオンライン診療サービスです。
             </p>
             <div className="mt-8">
               <LineButton label="30秒アンケートでクーポンを受け取る" variant="primary" />
