@@ -3,7 +3,7 @@ import { ChatIcon, ChevronIcon } from "@/components/ui/Icons";
 
 export default function LineButton({
   href = siteConfig.lineUrl,
-  label = "LINEで詳細を見る",
+  label = "アンケートでクーポンを受け取る",
   variant = "primary",
   className = "",
 }: {

@@ -5,6 +5,7 @@ import Features from "@/components/Features";
 import Beauty from "@/components/Beauty";
 import Recommend from "@/components/Recommend";
 import Menu from "@/components/Menu";
+import MedicineMenu from "@/components/MedicineMenu";
 import Oshikatsu from "@/components/Oshikatsu";
 import Flow from "@/components/Flow";
 import Faq from "@/components/Faq";
@@ -24,6 +25,7 @@ export default function Home() {
         <Beauty />
         <Recommend />
         <Menu />
+        <MedicineMenu />
         <Oshikatsu />
         <Flow />
         <Faq />

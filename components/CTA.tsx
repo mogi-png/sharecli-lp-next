@@ -44,7 +44,10 @@ export default function CTA() {
             <div className="mt-8">
               <LineButton variant="primary" />
               <p className="mt-2.5 text-center text-[11.5px] text-brand-ink/50 lg:text-left">
-                登録は30秒程度で完了します。
+                まずは30秒アンケートにご回答ください
+              </p>
+              <p className="mt-1 text-center text-[11.5px] text-brand-ink/50 lg:text-left">
+                アンケート回答後、対象の方にクーポンをご案内します
               </p>
             </div>
           </div>

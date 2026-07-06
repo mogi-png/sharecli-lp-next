@@ -66,7 +66,10 @@ export default function Hero({ image = defaultImage }: { image?: HeroImage }) {
               <div className="mt-5 lg:order-last lg:mt-6 lg:max-w-sm">
                 <LineButton />
                 <p className="mt-2 text-[11.5px] text-brand-ink-soft">
-                  登録は30秒で完了します
+                  まずは30秒アンケートにご回答ください
+                </p>
+                <p className="mt-1 text-[11.5px] text-brand-ink-soft">
+                  アンケート回答後、対象の方にクーポンをご案内します
                 </p>
               </div>
 
