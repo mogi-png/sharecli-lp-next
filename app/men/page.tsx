@@ -83,8 +83,7 @@ function MenHero() {
     <section className="relative overflow-hidden bg-linear-to-br from-[#EEF3FA] via-white to-[#F0F4F8]">
       <div className="grid lg:grid-cols-2 lg:items-stretch lg:min-h-[580px]">
         {/* 画像: SP上・PC右 */}
-        <div className="relative h-[260px] w-full lg:order-2 lg:h-full lg:min-h-[580px]">
-          <div className="absolute inset-0 bg-linear-to-br from-[#E8EEF5] via-[#EEF3FA] to-white" />
+        <div className="relative h-[380px] w-full lg:order-2 lg:h-full lg:min-h-[580px]">
           <Image
             src="/images/men/hero-otaku-man-ready.png"
             alt="バックパックを手にスマホを確認する男性のアニメイラスト"
@@ -92,7 +91,7 @@ function MenHero() {
             priority
             quality={90}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-center text-transparent lg:rounded-l-[48px]"
+            className="object-cover object-top text-transparent lg:rounded-l-[48px]"
           />
         </div>
 
