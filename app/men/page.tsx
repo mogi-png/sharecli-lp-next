@@ -86,13 +86,13 @@ function MenHero() {
         <div className="relative h-[260px] w-full lg:order-2 lg:h-full lg:min-h-[580px]">
           <div className="absolute inset-0 bg-linear-to-br from-[#E8EEF5] via-[#EEF3FA] to-white" />
           <Image
-            src="/images/oshikatsu.webp"
-            alt="スマホでオンライン診療を調べる男性のイラスト"
+            src="/images/men/hero-otaku-man-ready.png"
+            alt="バックパックを手にスマホを確認する男性のアニメイラスト"
             fill
             priority
             quality={90}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover text-transparent lg:rounded-l-[48px]"
+            className="object-cover object-center text-transparent lg:rounded-l-[48px]"
           />
         </div>
 
@@ -206,12 +206,12 @@ function MenConcept() {
           <div className="w-full lg:order-2 lg:flex-1">
             <div className="relative mx-auto aspect-[4/3] w-full max-w-[480px] overflow-hidden rounded-3xl bg-linear-to-br from-[#E8EEF5] via-white to-[#EEF3FA] shadow-md lg:max-w-none">
               <Image
-                src="/images/home.webp"
-                alt="自宅のデスクでスマホを使って相談する男性のイラスト"
+                src="/images/men/mirror-grooming-man.png"
+                alt="鏡の前で出かける前の身だしなみを整える男性のアニメイラスト"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover text-transparent"
+                className="object-cover object-top text-transparent"
               />
             </div>
           </div>
@@ -446,7 +446,34 @@ function MenMedicineMenu() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {/* AGA visual feature */}
+        <div className="mx-auto mt-8 mb-6 flex max-w-2xl flex-col items-center gap-5 overflow-hidden rounded-2xl border border-[#D1DCE9] bg-white shadow-sm sm:flex-row">
+          <div className="relative h-[200px] w-full shrink-0 sm:h-[176px] sm:w-[176px]">
+            <Image
+              src="/images/men/aga-consulting-man.png"
+              alt="スマホを見ながら髪を整える男性のアニメイラスト"
+              fill
+              quality={85}
+              sizes="(min-width: 640px) 176px, 100vw"
+              className="object-cover object-top text-transparent"
+            />
+          </div>
+          <div className="px-5 pb-5 sm:py-5 sm:pl-0 sm:pr-6">
+            <span className="badge inline-block rounded-full bg-[#EBF7F5] px-3 py-0.5 text-[11px] font-bold text-[#1E7A6E]">
+              AGA・薄毛ケア
+            </span>
+            <p className="mt-2 text-[14.5px] font-bold text-[#263445]">
+              スマホから薄毛の悩みを医師に相談
+            </p>
+            <p className="mt-1.5 text-[12.5px] leading-relaxed text-[#6B7A8D]">
+              フィナステリドやミノキシジルなど、診察結果をもとに医師が処方を検討します。
+              <br />
+              来院不要・自宅から気軽に相談できます。
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {medicineCategories.map(({ category, note, items, tag, dot }, idx) => (
             <div
               key={category}
@@ -648,12 +675,12 @@ function MenCta() {
           <div className="w-full lg:order-2 lg:w-[52%] lg:shrink-0">
             <div className="relative mx-auto aspect-[4/3] w-full max-w-[480px] overflow-hidden rounded-3xl bg-[#1a3358] shadow-lg lg:aspect-auto lg:h-full lg:min-h-[360px] lg:max-w-none">
               <Image
-                src="/images/cta.webp"
-                alt="スマホでオンライン診療を使う男性のイラスト"
+                src="/images/men/final-cta-man.png"
+                alt="鏡の前でセルフィーを撮る男性のアニメイラスト"
                 fill
                 quality={90}
                 sizes="(min-width: 1024px) 52vw, 100vw"
-                className="object-cover object-top text-transparent opacity-90"
+                className="object-cover object-top text-transparent"
               />
             </div>
           </div>
