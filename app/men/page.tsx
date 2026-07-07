@@ -452,14 +452,14 @@ function MenMedicineMenu() {
               className={`overflow-hidden rounded-2xl border border-[#D1DCE9] bg-white shadow-[0_2px_10px_-4px_rgba(30,58,92,0.12)] ${idx === medicineCategories.length - 1 && medicineCategories.length % 2 !== 0 ? "sm:col-span-2 sm:max-w-[calc(50%-8px)]" : ""}`}
             >
               {idx === 0 && (
-                <div className="relative h-[180px] w-full">
+                <div className="relative h-[260px] w-full">
                   <Image
                     src="/images/men/aga-consulting-man.png"
                     alt="スマホを見ながら髪を整える男性のアニメイラスト"
                     fill
                     quality={85}
                     sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-cover object-top text-transparent"
+                    className="object-cover object-[50%_8%] text-transparent"
                   />
                 </div>
               )}
