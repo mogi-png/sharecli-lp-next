@@ -35,7 +35,7 @@ function MenButton({
   return (
     <a
       href={siteConfig.lineUrl}
-      className={`flex w-full animate-[pulse-cta_2.6s_ease-in-out_infinite] items-center justify-center gap-2.5 rounded-full bg-linear-to-r from-[#1E3A5F] to-[#2272AE] px-5 py-4 text-base font-bold text-white shadow-[0_12px_24px_-8px_rgba(30,58,92,0.5)] ${className}`}
+      className={`cta-button flex w-full animate-[pulse-cta_2.6s_ease-in-out_infinite] items-center justify-center gap-2.5 rounded-full bg-linear-to-r from-[#1E3A5F] to-[#2272AE] px-5 py-4 text-base font-bold text-white shadow-[0_12px_24px_-8px_rgba(30,58,92,0.5)] ${className}`}
     >
       {label}
       <ChevronIcon className="h-[18px] w-[18px] shrink-0" />
@@ -56,7 +56,7 @@ function MH({
 }) {
   return (
     <div className="mb-9 mx-auto max-w-2xl text-center lg:mb-12">
-      <span className="mb-3 inline-block rounded-full border border-[#C8D8EC] bg-[#EEF3FA] px-3.5 py-1 text-xs font-bold tracking-wider text-[#2272AE]">
+      <span className="section-label mb-3 inline-block rounded-full border border-[#C8D8EC] bg-[#EEF3FA] px-3.5 py-1 text-xs font-bold tracking-wider text-[#2272AE]">
         {eyebrow}
       </span>
       <h2 className="font-heading text-[22px] leading-snug font-bold text-[#263445] sm:text-[26px] lg:text-[32px]">
@@ -101,10 +101,10 @@ function MenHero() {
           <Container wide className="lg:mx-0 lg:max-w-none lg:pr-0 lg:pl-10 xl:pl-16">
             <div className="mx-auto max-w-md text-center lg:mx-0 lg:max-w-lg lg:text-left">
               <div className="mb-4 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                <span className="inline-block rounded-full border border-[#C8D8EC] bg-white px-4 py-1.5 text-xs font-bold tracking-wider text-[#2272AE]">
+                <span className="badge inline-block rounded-full border border-[#C8D8EC] bg-white px-4 py-1.5 text-xs font-bold tracking-wider text-[#2272AE]">
                   来院不要・自宅完結
                 </span>
-                <span className="inline-block rounded-full bg-[#1E3A5F] px-4 py-1.5 text-xs font-bold tracking-wider text-white shadow-sm">
+                <span className="badge inline-block rounded-full bg-[#1E3A5F] px-4 py-1.5 text-xs font-bold tracking-wider text-white shadow-sm">
                   アンケート回答でクーポン発行
                 </span>
               </div>
@@ -172,7 +172,7 @@ function MenWorries() {
     <section className="bg-[#F0F4F8] py-10 lg:py-16">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase">WORRY</p>
+          <p className="section-label text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase">WORRY</p>
           <h2 className="mt-2 font-heading text-[26px] leading-[1.35] font-black text-[#263445] sm:text-[30px] lg:text-[36px]">
             こんな悩み、ありませんか？
           </h2>
@@ -218,7 +218,7 @@ function MenConcept() {
 
           {/* テキスト: SP下・PC左 */}
           <div className="w-full lg:order-1 lg:flex-1">
-            <p className="text-center text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase lg:text-left">
+            <p className="section-label text-center text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase lg:text-left">
               CONCEPT
             </p>
             <h2 className="mt-2 text-center font-heading text-[26px] leading-[1.35] font-black text-[#263445] sm:text-[30px] lg:text-left lg:text-[36px]">
@@ -333,7 +333,7 @@ function MenPrice() {
           title={
             <>
               今の購入価格から
-              <span className="text-[#1E3A5F]">5%OFF</span>で
+              <span className="price-label text-[#1E3A5F]">5%OFF</span>で
               <br />
               ご案内できる可能性があります
             </>
@@ -348,10 +348,10 @@ function MenPrice() {
               </div>
               <div>
                 <div className="mb-2 flex flex-wrap gap-1.5">
-                  <span className="inline-block rounded-full bg-[#1E3A5F] px-3 py-0.5 text-[11px] font-bold text-white">
+                  <span className="badge inline-block rounded-full bg-[#1E3A5F] px-3 py-0.5 text-[11px] font-bold text-white">
                     診察料0円
                   </span>
-                  <span className="inline-block rounded-full border border-[#C8D8EC] bg-[#EEF3FA] px-3 py-0.5 text-[11px] font-bold text-[#2272AE]">
+                  <span className="badge inline-block rounded-full border border-[#C8D8EC] bg-[#EEF3FA] px-3 py-0.5 text-[11px] font-bold text-[#2272AE]">
                     お薬代・送料は別途
                   </span>
                 </div>
@@ -361,7 +361,7 @@ function MenPrice() {
                 <p className="mt-2 text-[13.5px] leading-relaxed text-[#6B7A8D]">
                   現在、他のクリニックやオンライン診療サービスをご利用中の方は、シェアクリでも同等の内容を
                   <strong className="text-[#263445]">
-                    今より5%OFFでご案内できる可能性
+                    今より<span className="price-label">5%OFF</span>でご案内できる可能性
                   </strong>
                   があります。
                 </p>
@@ -434,7 +434,7 @@ function MenMedicineMenu() {
     <section className="bg-[#F4F7FA] py-10 lg:py-16">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase">MENU</p>
+          <p className="section-label text-xs font-bold tracking-[0.2em] text-[#2272AE] uppercase">MENU</p>
           <h2 className="mt-2 font-heading text-[24px] leading-[1.35] font-black text-[#263445] sm:text-[28px] lg:text-[34px]">
             診察結果に応じて
             <span className="text-[#1E3A5F]">相談できるお薬例</span>
@@ -453,7 +453,7 @@ function MenMedicineMenu() {
               className={`rounded-2xl border border-[#D1DCE9] bg-white p-5 shadow-[0_2px_10px_-4px_rgba(30,58,92,0.12)] ${idx === medicineCategories.length - 1 && medicineCategories.length % 2 !== 0 ? "sm:col-span-2 sm:max-w-[calc(50%-8px)]" : ""}`}
             >
               <div className="mb-3 flex items-center gap-2">
-                <span className={`rounded-full px-3 py-0.5 text-[11px] font-bold ${tag}`}>
+                <span className={`badge rounded-full px-3 py-0.5 text-[11px] font-bold ${tag}`}>
                   {category}
                 </span>
               </div>
@@ -520,7 +520,7 @@ function MenFlow() {
           {steps.map((s, i) => (
             <div key={s.step} className="flex gap-5">
               <div className="flex flex-col items-center">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1E3A5F] text-[13px] font-black text-white shadow">
+                <div className="step-number flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1E3A5F] text-[13px] font-black text-white shadow">
                   {s.step}
                 </div>
                 {i < steps.length - 1 && (
@@ -621,7 +621,7 @@ function MenFaq() {
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-[13.5px] font-bold text-[#263445]">
                 <span className="flex items-center gap-2">
-                  <span className="text-[#2272AE]">Q</span>
+                  <span className="section-label text-[#2272AE]">Q</span>
                   {item.question}
                 </span>
                 <ChevronIcon className="h-4 w-4 shrink-0 rotate-90 text-[#2272AE] transition-transform group-open:rotate-[270deg]" />
@@ -678,7 +678,7 @@ function MenCta() {
             <div className="mt-8 lg:max-w-sm">
               <a
                 href={siteConfig.lineUrl}
-                className="flex w-full animate-[pulse-cta_2.6s_ease-in-out_infinite] items-center justify-center gap-2.5 rounded-full bg-white px-5 py-4 text-base font-bold text-[#1E3A5F] shadow-[0_12px_24px_-8px_rgba(0,0,0,0.35)]"
+                className="cta-button flex w-full animate-[pulse-cta_2.6s_ease-in-out_infinite] items-center justify-center gap-2.5 rounded-full bg-white px-5 py-4 text-base font-bold text-[#1E3A5F] shadow-[0_12px_24px_-8px_rgba(0,0,0,0.35)]"
               >
                 30秒アンケートでクーポンを受け取る
                 <ChevronIcon className="h-[18px] w-[18px] shrink-0" />

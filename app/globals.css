@@ -35,3 +35,33 @@ body {
     transform: scale(1.025);
   }
 }
+
+/* ─── /men LP: scoped font overrides (他ページに影響しない) ─────────────── */
+.men-lp {
+  --font-heading: var(--font-men-heading, var(--font-noto-sans-jp)), "Noto Sans JP", "Hiragino Sans", sans-serif;
+  font-family: var(--font-men-heading, var(--font-noto-sans-jp)), "Noto Sans JP", "Hiragino Sans", sans-serif;
+}
+
+.men-lp h1,
+.men-lp h2,
+.men-lp h3,
+.men-lp .font-heading {
+  font-family: var(--font-men-heading, var(--font-noto-sans-jp)), "Noto Sans JP", "Hiragino Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.men-lp .section-label,
+.men-lp .price-label,
+.men-lp .step-number,
+.men-lp .badge {
+  font-family: var(--font-men-label), "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.men-lp .cta-button {
+  font-family: var(--font-men-label), "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
