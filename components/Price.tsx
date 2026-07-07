@@ -69,7 +69,7 @@ export default function Price() {
 
           {/* イラスト — SP下・PC右 */}
           <div className="w-full lg:w-[42%] lg:shrink-0">
-            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-pink-pale via-white to-brand-purple-pale shadow-md aspect-[3/4] lg:aspect-auto lg:h-full lg:min-h-[360px]">
+            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-pink-pale via-white to-brand-purple-pale shadow-md aspect-square lg:aspect-auto lg:h-full lg:min-h-[360px]">
               <Image
                 src="/images/price-coupon.png"
                 alt="スマホでクーポンを確認する女性のイラスト"
