@@ -67,16 +67,16 @@ export default function Price() {
             </div>
           </div>
 
-          {/* 写真 — SP下・PC右 */}
-          <div className="w-full lg:w-[45%] lg:shrink-0">
-            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-slate-50 via-blue-50 to-slate-100 shadow-md aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[320px]">
+          {/* イラスト — SP下・PC右 */}
+          <div className="w-full lg:w-[42%] lg:shrink-0">
+            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-brand-pink-pale via-white to-brand-purple-pale shadow-md aspect-[3/4] lg:aspect-auto lg:h-full lg:min-h-[360px]">
               <Image
-                src="/images/online-clinic/price-check.jpg"
-                alt="価格を確認する女性"
+                src="/images/price-coupon.png"
+                alt="スマホでクーポンを確認する女性のイラスト"
                 fill
                 quality={90}
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover text-transparent"
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover object-top text-transparent"
               />
             </div>
           </div>
