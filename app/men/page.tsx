@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
-import Header from "@/components/Header";
+import MenHeader from "@/components/MenHeader";
 import Footer from "@/components/Footer";
 import Container from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
@@ -702,7 +702,7 @@ function MenCta() {
 export default function MenPage() {
   return (
     <div className="relative w-full overflow-x-hidden bg-white">
-      <Header />
+      <MenHeader />
       <main>
         <MenHero />
         <MenWorries />
