@@ -445,53 +445,40 @@ function MenMedicineMenu() {
           </p>
         </div>
 
-        {/* AGA visual feature */}
-        <div className="mx-auto mt-8 mb-6 flex max-w-2xl flex-col items-center gap-5 overflow-hidden rounded-2xl border border-[#D1DCE9] bg-white shadow-sm sm:flex-row">
-          <div className="relative h-[200px] w-full shrink-0 sm:h-[176px] sm:w-[176px]">
-            <Image
-              src="/images/men/aga-consulting-man.png"
-              alt="スマホを見ながら髪を整える男性のアニメイラスト"
-              fill
-              quality={85}
-              sizes="(min-width: 640px) 176px, 100vw"
-              className="object-cover object-top text-transparent"
-            />
-          </div>
-          <div className="px-5 pb-5 sm:py-5 sm:pl-0 sm:pr-6">
-            <span className="badge inline-block rounded-full bg-[#EBF7F5] px-3 py-0.5 text-[11px] font-bold text-[#1E7A6E]">
-              AGA・薄毛ケア
-            </span>
-            <p className="mt-2 text-[14.5px] font-bold text-[#263445]">
-              スマホから薄毛の悩みを医師に相談
-            </p>
-            <p className="mt-1.5 text-[12.5px] leading-relaxed text-[#6B7A8D]">
-              フィナステリドやミノキシジルなど、診察結果をもとに医師が処方を検討します。
-              <br />
-              来院不要・自宅から気軽に相談できます。
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {medicineCategories.map(({ category, note, items, tag, dot }, idx) => (
             <div
               key={category}
-              className={`rounded-2xl border border-[#D1DCE9] bg-white p-5 shadow-[0_2px_10px_-4px_rgba(30,58,92,0.12)] ${idx === medicineCategories.length - 1 && medicineCategories.length % 2 !== 0 ? "sm:col-span-2 sm:max-w-[calc(50%-8px)]" : ""}`}
+              className={`overflow-hidden rounded-2xl border border-[#D1DCE9] bg-white shadow-[0_2px_10px_-4px_rgba(30,58,92,0.12)] ${idx === medicineCategories.length - 1 && medicineCategories.length % 2 !== 0 ? "sm:col-span-2 sm:max-w-[calc(50%-8px)]" : ""}`}
             >
-              <div className="mb-3 flex items-center gap-2">
-                <span className={`badge rounded-full px-3 py-0.5 text-[11px] font-bold ${tag}`}>
-                  {category}
-                </span>
+              {idx === 0 && (
+                <div className="relative h-[180px] w-full">
+                  <Image
+                    src="/images/men/aga-consulting-man.png"
+                    alt="スマホを見ながら髪を整える男性のアニメイラスト"
+                    fill
+                    quality={85}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top text-transparent"
+                  />
+                </div>
+              )}
+              <div className="p-5">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className={`badge rounded-full px-3 py-0.5 text-[11px] font-bold ${tag}`}>
+                    {category}
+                  </span>
+                </div>
+                <p className="mb-2 text-[11.5px] text-[#6B7A8D]">{note}</p>
+                <ul className="flex flex-col gap-1.5">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-[13px] text-[#263445]">
+                      <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="mb-2 text-[11.5px] text-[#6B7A8D]">{note}</p>
-              <ul className="flex flex-col gap-1.5">
-                {items.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-[13px] text-[#263445]">
-                    <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
